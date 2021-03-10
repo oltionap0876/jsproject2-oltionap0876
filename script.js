@@ -27,6 +27,7 @@ var userSection = function(satSection) {
 
 
 var scoreRangeCriticalReading = promt("Enter the score between 200-800 that you want to see and we'll give you the schools with that score");
+var 
 
 if (satSection = critical reading)// Reminder for isabel: remember to code the right way this is just a "notecatcher "
 if (satSection = writing)
