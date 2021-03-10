@@ -13,6 +13,7 @@ document.write ("<br>"+ "Section: " + satSection + "<br>"); // writes user input
 
 alert("Great choice! Now, what scores are you looking for the school to have?"); 
 
+
 if (satSection === "critical reading" , " Critical Reading"){
     var criticalReadingSatScore = prompt( "Enter a score between 200 and 800 ie: 355");
     alert(" Generating a list of schools with the SAT score of " + criticalReadingSatScore + " in the " + satSection + " section " );
@@ -26,4 +27,4 @@ if (satSection === "critical reading" , " Critical Reading"){
     alert(" Generating a list of schools with the SAT score of " + writingSatScore + " in the " + satSection + " section " );
     document.write ("<br>"+ "Score: " + writingSatScore + "<br>");
 }
-//  creates a conditional for each SAT section then asks for a score they are looking for
+//  creates a conditional for each SAT section then asks for a score they are looking fo
