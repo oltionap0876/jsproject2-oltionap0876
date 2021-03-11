@@ -27,3 +27,11 @@ if (satSection === "critical reading" , " Critical Reading"){
     document.write ("<br>"+ "Score: " + writingSatScore + "<br>");
 }
 //  creates a conditional for each SAT section then asks for a score they are looking for
+
+for(var i = 0; i < score.length; i++){
+    if(score[i].value.index0f("f") == userNum){
+        document.write(score[i].score + "<br>");
+    }
+}
+
+
