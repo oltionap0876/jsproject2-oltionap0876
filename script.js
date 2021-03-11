@@ -1,16 +1,27 @@
  $.ajax({
                 url: 'https://data.cityofnewyork.us/resource/f9bf-2cp4.json',
                 dataType: 'json',
-                success: function(cat) {
-                    console.log(cat);
+                success: function(data) {
+                    console.log(data);
                 }
             });
 
-/*let url = "https://data.cityofnewyork.us/resource/f9bf-2cp4.json"
-fetch (u)
+let url = "https://data.cityofnewyork.us/resource/f9bf-2cp4.json";
+
+fetch (url)
 .then(response => response.json())
-  .then(data => console.log(data));
-  */
+  .then(data => {
+  console.log(data);
+  var schoolsArray = data;
+  
+  data.schoolsArray.map(Schools => {
+      
+     document.write(schoolsArray.school_name);
+      
+  });
+  
+  });
+  
 
 alert ("Hello, we've created a tool that gives you the name of the schools with a certain SAT score");  //Introduction
 
