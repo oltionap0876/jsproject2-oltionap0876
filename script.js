@@ -4,8 +4,7 @@ $.ajax({
     success: function(data) {
         console.log(data);
     }
-});
-
+})
 alert ("Hello, we've created a tool that gives you the name of the schools with a certain SAT score"); //Introduction
 
 var satSection = prompt("What section of the SAT would you like to look at? (critical reading, writing or math)");// asks for user input 
@@ -27,4 +26,10 @@ if (satSection === "critical reading" , " Critical Reading"){
     alert(" Generating a list of schools with the SAT score of " + writingSatScore + " in the " + satSection + " section " );
     document.write ("<br>"+ "Score: " + writingSatScore + "<br>");
 }
+
+
+;
+
+
+
 //  creates a conditional for each SAT section then asks for a score they are looking fo
