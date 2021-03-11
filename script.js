@@ -1,10 +1,10 @@
-$.ajax({
-    url: 'https://data.cityofnewyork.us/resource/f9bf-2cp4.json',
-    dataType: 'json',
-    success: function(data) {
-        console.log(data);
-    }
-});
+ $.ajax({
+                url: 'https://data.cityofnewyork.us/resource/f9bf-2cp4.json',
+                dataType: 'json',
+                success: function(cat) {
+                    console.log(cat);
+                }
+            });
 
 /*let url = "https://data.cityofnewyork.us/resource/f9bf-2cp4.json"
 fetch (u)
@@ -12,7 +12,7 @@ fetch (u)
   .then(data => console.log(data));
   */
 
-alert ("Hello, we've created a tool that gives you the name of the schools with a certain SAT score"); //Introduction
+alert ("Hello, we've created a tool that gives you the name of the schools with a certain SAT score");  //Introduction
 
 var satSection = prompt("What section of the SAT would you like to look at? (critical reading, writing or math)");// asks for user input 
 document.write ("<br>"+ "Section: " + satSection + "<br>"); // writes user input on screen
