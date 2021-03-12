@@ -44,7 +44,6 @@ if (satSection === "critical reading" , " Critical Reading"){
     alert(" Generating a list of schools with the SAT score of " + writingSatScore + " in the " + satSection + " section " );
     document.write ("<br>"+ "Score: " + writingSatScore + "<br>");
 }
-<<<<<<< HEAD
 
 
 ;
@@ -56,6 +55,4 @@ for(var i = 0; i < data.length; i++){
 
 
 //  creates a conditional for each SAT section then asks for a score they are looking fo
-=======
 //  creates a conditional for each SAT section then asks for a score they are looking fo
->>>>>>> 6f9b539cef8b9a748906c87de76163bdb706dab8
