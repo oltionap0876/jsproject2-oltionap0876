@@ -1,26 +1,19 @@
- $.ajax({
-                url: 'https://data.cityofnewyork.us/resource/f9bf-2cp4.json',
-                dataType: 'json',
-                success: function(data) {
-                    console.log(data);
-                }
-            });
-
+ 
+ /* 
 let url = "https://data.cityofnewyork.us/resource/f9bf-2cp4.json";
 
 fetch (url)
 .then(response => response.json())
   .then(data => {
   console.log(data);
+ 
   var schoolsArray = data;
 
-  data.schoolsArray.map(Schools => {
-
-     document.write(schoolsArray.school_name);
-
+ 
+   document.write(schoolsArray.dbn.school_name);
+   
   });
-
-  });
+  */
 
 
 alert ("Hello, we've created a tool that gives you the name of the schools with a certain SAT score");  //Introduction
@@ -34,27 +27,54 @@ alert("Great choice! Now, what scores are you looking for the school to have?");
 if (satSection === "critical reading" , " Critical Reading"){
     var criticalReadingSatScore = prompt( "Enter a score between 200 and 800 ie: 355");
     alert(" Generating a list of schools with the SAT score of " + criticalReadingSatScore + " in the " + satSection + " section " );
-    document.write ("<br>"+ "Score: " + criticalReadingSatScore + "<br>"); // writes what score user is looking for
+    document.write ("<br>"+ "Score: " + criticalReadingSatScore + "<br>");
+    console.log("<br>"+ "Score: " + criticalReadingSatScore + "<br>");// writes what score user is looking for
 } else if (satSection === "Math", "math") {
     var mathSatScore =  prompt( "Enter a score between 200 and 800 ie: 244");
     alert(" Generating a list of schools with the SAT score of " + mathSatScore + " in the " + satSection + " section " );
     document.write ("<br>"+ "Score: " + mathSatScore + "<br>");
+    console.log ("<br>"+ "Score: " + mathSatScore + "<br>");
 } else if (satSection === " Writing", "writing"){
     var writingSatScore = prompt("Enter a score between 200 and 800 ie: 453");
     alert(" Generating a list of schools with the SAT score of " + writingSatScore + " in the " + satSection + " section " );
     document.write ("<br>"+ "Score: " + writingSatScore + "<br>");
+     console.log ("<br>"+ "Score: " + writingSatScore + "<br>");
 }
 
-for(var i = 0; i < data.length; i++){
-    if(data[i].value.indexOf("f") == userNum){
 
-    }
-}
+$.ajax({
+                url: 'https://data.cityofnewyork.us/resource/f9bf-2cp4.json',
+                dataType: 'json',
+                success: function(data) {
+                    var schoolArray = [ ];
+                    var sArray = [ ];
+                    console.log(data);
+                     for(var i = 0; i < data.length; i++){
+                    
+               // }
+           // });
+
+
+    
+   if(data[i].sat_critical_reading_avg_score === criticalReadingSatScore) {
+        var satScoreCritMatch = data [i].sat_critical_reading_avg_score;
+        if (!schoolArray == satScoreCritMatch)  {
+           sArray.push(satScoreCritMatch);
+        }
+           
+    } 
+    document.write ("<br>"+ "Score: " + data[i].sat_critical_reading_avg_score + "<br>");
+    document.write("<br>" + " School Name: " + data[i].school_name + "<br>");
+    console.log("<br>"+ "Score: " + data[i].sat_critical_reading_avg_score + "<br>");
+    console.log("<br>" + " School Name: " + data[i].school_name + "<br>");
+            
+                }}});
+                
 
 
 //  creates a conditional for each SAT section then asks for a score they are looking for
 
-
+/*
 for(var i = 0; i < score.length; i++){
     if(score[i].value.index0f("f") == userNum){
         document.write(score[i].score + "<br>");
@@ -62,5 +82,5 @@ for(var i = 0; i < score.length; i++){
 }
 
 
-
+*/
 
