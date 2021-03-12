@@ -52,16 +52,8 @@ for(var i = 0; i < data.length; i++){
 }
 
 
-//  creates a conditional for each SAT section then asks for a score they are looking fo
-//  creates a conditional for each SAT section then asks for a score they are looking fo
-
-
-;
-
-
-
-//  creates a conditional for each SAT section then asks for a score they are looking fo
 //  creates a conditional for each SAT section then asks for a score they are looking for
+
 
 for(var i = 0; i < score.length; i++){
     if(score[i].value.index0f("f") == userNum){
@@ -71,5 +63,4 @@ for(var i = 0; i < score.length; i++){
 
 
 
-//  creates a conditional for each SAT section then asks for a score they are looking fo
 
