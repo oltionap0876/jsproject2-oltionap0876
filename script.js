@@ -13,15 +13,15 @@ fetch (url)
   .then(data => {
   console.log(data);
   var schoolsArray = data;
-  
+
   data.schoolsArray.map(Schools => {
-      
+
      document.write(schoolsArray.school_name);
-      
+
   });
-  
+
   });
-  
+
 
 alert ("Hello, we've created a tool that gives you the name of the schools with a certain SAT score");  //Introduction
 
@@ -45,14 +45,13 @@ if (satSection === "critical reading" , " Critical Reading"){
     document.write ("<br>"+ "Score: " + writingSatScore + "<br>");
 }
 
-
-;
 for(var i = 0; i < data.length; i++){
     if(data[i].value.indexOf("f") == userNum){
-        
+
     }
 }
 
 
-//  creates a conditional for each SAT section then asks for a score they are looking fo
-//  creates a conditional for each SAT section then asks for a score they are looking fo
+//  creates a conditional for each SAT section then asks for a score they are looking for
+
+
