@@ -1,29 +1,16 @@
- 
- /* 
-let url = "https://data.cityofnewyork.us/resource/f9bf-2cp4.json";
 
-fetch (url)
-.then(response => response.json())
-  .then(data => {
-  console.log(data);
- 
-  var schoolsArray = data;
+// Intro to out project
+alert ("Hello, we've created a tool that gives you the name of the schools with a certain SAT score");  
 
- 
-   document.write(schoolsArray.dbn.school_name);
-   
-  });
-  */
-
-
-alert ("Hello, we've created a tool that gives you the name of the schools with a certain SAT score");  //Introduction
-
-var satSection = prompt("What section of the SAT would you like to look at? (critical reading, writing or math)");// asks for user input
+// asks for user input on what section they want to look at and puts their choice on the screen
+var satSection = prompt("What section of the SAT would you like to look at? (critical reading, writing or math)");
 document.write ("<br>"+ "Section: " + satSection + "<br>"); // writes user input on screen
+
 
 alert("Great choice! Now, what scores are you looking for the school to have?");
 
-//  creates a conditional for each SAT section then asks for a score they are looking fo
+
+//  creates a conditional for each SAT section then asks for a score they are looking for based on the section they want 
 if (satSection === "critical reading" , " Critical Reading"){
     var criticalReadingSatScore = prompt( "Enter a score between 200 and 800 ie: 355");
     alert(" Generating a list of schools with the SAT score of " + criticalReadingSatScore + " in the " + satSection + " section " );
@@ -46,41 +33,38 @@ $.ajax({
                 url: 'https://data.cityofnewyork.us/resource/f9bf-2cp4.json',
                 dataType: 'json',
                 success: function(data) {
-                    var schoolArray = [ ];
-                    var sArray = [ ];
+    
                     console.log(data);
                      for(var i = 0; i < data.length; i++){
                     
-               // }
-           // });
-
-
+   /*if( criticalReadingSatScore == data[i].sat_critical_reading_avg_score) {
+        document.write("<br>" + " School Name: " + data[i].school_name + "<br>");
+        document.write ("<br>"+ "Critical Reading score: " + data[i].sat_critical_reading_avg_score + "<br>");
+        document.write ("<hr>");
+        console.log("<br>"+ "Score: " + data[i].sat_critical_reading_avg_score + "<br>");
+        console.log("<br>" + " School Name: " + data[i].school_name + "<br>");
+ 
+   } */
+   if ( mathSatScore == data[i].sat_math_avg_score) {
+                document.write("<br>" + " School Name: " + data[i].school_name + "<br>");
+                document.write("<br>"+ " Math score: " + data[i].sat_math_avg_score + "<br>");
+                document.write("<hr>");
+                console.log("<br>" + " School Name: " + data[i].school_name + "<br>");
+                console.log("<br>"+ "Math score: " + data[i].sat_math_avg_score + "<br>");
+                
+            } 
+    /*if (writingSatScore == data[i].sat_writing_avg_score)
+                document.write("<br>" + " School Name: " + data[i].school_name + "<br>");
+                document.write ("<br>"+ " Writing score: " + data[i].sat_writing_avg_score + "<br>");
+                document.write ("<hr>");
+                console.log("<br>" + " School Name: " + data[i].school_name + "<br>");
+                console.log("<br>"+ "Writing score: " + data[i].sat_writing_avg_score + "<br>");
+               
+               
+               
+             
     
-   if(data[i].sat_critical_reading_avg_score === criticalReadingSatScore) {
-        var satScoreCritMatch = data [i].sat_critical_reading_avg_score;
-        if (!schoolArray == satScoreCritMatch)  {
-           sArray.push(satScoreCritMatch);
-        }
-           
-    } 
-    document.write ("<br>"+ "Score: " + data[i].sat_critical_reading_avg_score + "<br>");
-    document.write("<br>" + " School Name: " + data[i].school_name + "<br>");
-    console.log("<br>"+ "Score: " + data[i].sat_critical_reading_avg_score + "<br>");
-    console.log("<br>" + " School Name: " + data[i].school_name + "<br>");
-            
+            */
                 }}});
                 
-
-
-//  creates a conditional for each SAT section then asks for a score they are looking for
-
-/*
-for(var i = 0; i < score.length; i++){
-    if(score[i].value.index0f("f") == userNum){
-        document.write(score[i].score + "<br>");
-    }
-}
-
-
-*/
 
